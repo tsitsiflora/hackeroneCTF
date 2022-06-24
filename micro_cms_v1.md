@@ -23,3 +23,10 @@ This is an easy challenge
 3. Edit the title to <h1>Testing</h1>
 4. Click `save` then `Go home`
 5. The flag will be reflected on the home page as an alert
+
+### Flag 3
+
+1. This is a url manipulation vulnerability. Click on any page.
+2. Go the the `Edit this page` page
+3. Add a closing quote on the url so that the url looks something like this `https://31f2d2953d58f9ac05d32e6f6953c859.ctf.hacker101.com/page/edit/10'`
+4. The flag will be revealed
