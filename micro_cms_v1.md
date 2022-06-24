@@ -30,3 +30,14 @@ This is an easy challenge
 2. Go the the `Edit this page` page
 3. Add a closing quote on the url so that the url looks something like this `https://31f2d2953d58f9ac05d32e6f6953c859.ctf.hacker101.com/page/edit/10'`
 4. The flag will be revealed
+
+### Flag 4
+
+1. The vulnerability here is that `<script>` is is filtered but not attributed inside <>. This is again a Simple XSS. Open the `Edit Markdown` page
+2. Where there is a button tag, replace it with the following: 
+
+
+<button onclick="alert('xss')>Some button</button>
+
+3. Save the page and right click to view page source
+4. The flag will be revealed
