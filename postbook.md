@@ -45,4 +45,31 @@ You can edit the id on this element to another user's and you will see a flag th
 
 ### Flag 5
 
+1. We can get this flag by manipulating the session cookies being used on the platform. You can use an extension on your browser to manage the cookies
+2. Login as a normal user and take a look at your cookie. It is an md5 hash of your user ID
+3. You can use an online decryptor to check and decrypt the md5 hash. This also means you can create an md5 hash of the user admin by encrypting 1
+4. When you get the hash, edit the cookie value and replace it with this one. You will be able to switch accounts
+5. Your flag will be revealed
+
+### Flag 6
+
+1. We can find this flag by deleting someone else's post by manipulating the value on the delete url
+2. Login as a normal user and create a post. On that post you can see you will be able to delete or edit that post. Those options are not available for posts made by other users
+3. Note down the id on the post you want to delete(it's a number)
+4. Right click to `inspect elements`. You will see on your post an element like this
+
+```
+<a style="color: red;" href="index.php?page=delete.php&amp;id=8f14e45fceea167a5a36dedd4bea2543">delete</a>
+```
+The id is an md5 hash. If you decrypt it, you get the post id
+
+5. To exploit this, you need to md5 encrypt the id of the post you want to delete and replace it with the one on the above url
+6. Press `Delete` and you will be able to delete another user's post. Your flag will be revealed then
+
+## Vulnerabilities Covered
+
+1. Insecure Direct Object Reference
+2. Cookie Manipulation
+3. Password Attack
+
 
